@@ -19,7 +19,7 @@ const sourceSerif = Source_Serif_4({
 });
 
 export const metadata: Metadata = {
-  title: "Backend Engineer | FastAPI • DevOps • AI Agents",
+  title: "Shahryar Backend Engineer | FastAPI • DevOps • AI Agents",
   description: "Specializing in FastAPI backend architecture, DevOps automation, and AI agent development. Building high-performance APIs and intelligent systems.",
 };
 

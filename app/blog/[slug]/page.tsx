@@ -144,19 +144,19 @@ const blogPosts: Record<string, {
         <h2 className="text-3xl font-serif font-medium mb-6 mt-12">Challenges Faced</h2>
         <div className="space-y-4 mb-8">
           <div className="bg-muted/20 border border-border p-4">
-            <h4 className="font-medium mb-2">🔒 Docker Permissions</h4>
+            <h4 className="font-medium mb-2"> Docker Permissions</h4>
             <p className="text-sm text-muted-foreground">Jenkins container needed special permissions to access Docker socket</p>
           </div>
           <div className="bg-muted/20 border border-border p-4">
-            <h4 className="font-medium mb-2">🌐 Network Isolation</h4>
+            <h4 className="font-medium mb-2"> Network Isolation</h4>
             <p className="text-sm text-muted-foreground">Health checks couldn't reach containers via localhost</p>
           </div>
           <div className="bg-muted/20 border border-border p-4">
-            <h4 className="font-medium mb-2">🛡️ Security Groups</h4>
+            <h4 className="font-medium mb-2"> Security Groups</h4>
             <p className="text-sm text-muted-foreground">Had to configure AWS firewall rules for ports 8080 and 8000</p>
           </div>
           <div className="bg-muted/20 border border-border p-4">
-            <h4 className="font-medium mb-2">💻 Shell Syntax</h4>
+            <h4 className="font-medium mb-2"> Shell Syntax</h4>
             <p className="text-sm text-muted-foreground">Different shell syntax requirements in Jenkins pipeline</p>
           </div>
         </div>
