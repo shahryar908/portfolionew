@@ -435,6 +435,27 @@ const blogPosts: Record<string, {
         </ul>
 
         <h2 className="text-3xl font-serif font-medium mb-6 mt-12">System Architecture</h2>
+        
+        {/* Deployment Workflow Diagram */}
+        <div className="mb-8">
+          <h3 className="text-xl font-serif font-medium mb-4">Deployment Workflow</h3>
+          <p className="text-muted-foreground mb-4 text-sm">
+            The complete deployment pipeline from development to production, showing the journey from containerization
+            to public availability on AWS EKS:
+          </p>
+          <div className="border border-border rounded-lg overflow-hidden bg-background">
+            <img 
+              src="/blog/attendance-deployment-workflow.png" 
+              alt="Deployment workflow diagram showing Dockerization → Docker Hub → AWS EKS → LoadBalancer → Public Access"
+              className="w-full h-auto"
+            />
+          </div>
+          <p className="text-xs text-muted-foreground mt-2 italic">
+            High-level deployment workflow: Application components (HTTP, WebSocket, MongoDB) are containerized,
+            pushed to Docker Hub, deployed to AWS EKS cluster, and exposed via LoadBalancer for public internet access
+          </p>
+        </div>
+
         <div className="bg-muted/30 border border-border p-6 rounded font-mono text-xs overflow-x-auto mb-8">
           <pre>{`┌──────────────────────────────────────────────┐
 │          Internet (Users)                     │
@@ -632,6 +653,10 @@ const blogPosts: Record<string, {
         <h2 className="text-3xl font-serif font-medium mb-6 mt-12">API Usage Examples</h2>
 
         <h3 className="text-2xl font-serif font-medium mb-4 mt-8">1. User Signup</h3>
+        <p className="text-muted-foreground mb-4 text-sm">
+          Register a new user with email, password, and role. The endpoint validates input, hashes the password
+          with bcrypt, and returns the created user object with a unique ID.
+        </p>
         <div className="bg-muted/30 border border-border p-4 rounded font-mono text-xs mb-4 overflow-x-auto">
           <pre>{`curl -X POST http://YOUR-URL/signup \\
   -H "Content-Type: application/json" \\
@@ -641,6 +666,26 @@ const blogPosts: Record<string, {
     "password": "secure123",
     "role": "teacher"
   }'`}</pre>
+        </div>
+
+        {/* API Client Screenshot */}
+        <div className="mb-8">
+          <p className="text-muted-foreground mb-4 text-sm">
+            <strong className="text-foreground">Live API Example:</strong> Here's a real API request to the production
+            endpoint showing successful user registration:
+          </p>
+          <div className="border border-border rounded-lg overflow-hidden bg-background">
+            <img 
+              src="/blog/attendance-api-signup.png" 
+              alt="API client screenshot showing successful POST /signup request with 200 OK response, demonstrating user registration endpoint"
+              className="w-full h-auto"
+            />
+          </div>
+          <p className="text-xs text-muted-foreground mt-2 italic">
+            Postman/API client screenshot showing a successful signup request. The request body contains user credentials
+            (name, email, password, role), and the response confirms successful creation with a 200 OK status and
+            returns the user object with a unique MongoDB _id.
+          </p>
         </div>
 
         <h3 className="text-2xl font-serif font-medium mb-4 mt-8">2. Login & Get JWT Token</h3>
