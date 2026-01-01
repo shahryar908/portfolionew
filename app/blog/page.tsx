@@ -4,6 +4,15 @@ import Link from "next/link"
 // Blog posts data - you can move this to a separate file or CMS later
 const blogPosts = [
   {
+    id: "attendance-management-system-aws-eks",
+    title: "Production-Ready Attendance System: FastAPI, WebSockets & AWS EKS",
+    excerpt: "Building a complete real-time attendance tracking system from scratch with JWT authentication, RBAC, WebSocket communication, and production deployment on AWS EKS. A deep dive into scalable backend architecture, Kubernetes orchestration, and real-world DevOps practices.",
+    date: "2025-01-15",
+    readTime: "18 min read",
+    tags: ["FastAPI", "Kubernetes", "AWS EKS", "WebSockets", "MongoDB", "Docker"],
+    featured: true
+  },
+  {
     id: "fastapi-cicd-pipeline",
     title: "Building a Complete CI/CD Pipeline for FastAPI on AWS",
     excerpt: "A hands-on learning journey building an automated deployment pipeline with Jenkins, Docker, and AWS EC2. Learn how I configured continuous integration, automated testing, and zero-downtime deployments for a FastAPI application.",
